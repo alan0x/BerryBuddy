@@ -1,0 +1,23 @@
+[package]
+name = "ai-foundation"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.92"
+
+[dependencies]
+async-trait = "0.1.87"
+base64 = "0.22.1"
+bytes = { version = "1.11.0", features = ["serde"] }
+flate2 = "1.0"
+futures-util = { version = "0.3.32", features = ["sink"] }
+gcp_auth = "0.12.5"
+mime_guess = "2.0.4"
+reqwest = { version = "0.12.26", features = ["json", "rustls-tls"] }
+rustls = "0.23.35"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.148"
+thiserror = "2.0.17"
+tokio = { version = "1.48.0", features = ["fs", "macros", "net", "sync", "time"] }
+tokio-tungstenite = { version = "0.28.0", features = ["rustls-tls-webpki-roots"] }
+tracing = "0.1.44"
+uuid = { version = "1.19.0", features = ["v4"] }

@@ -3,6 +3,15 @@ name = "BerryBuddy"
 version = "0.1.0"
 edition = "2024"
 
+[workspace]
+members = ["crates/ai-foundation"]
+resolver = "3"
+
 [dependencies]
-reqwest = { version = "0.12", features = ["blocking", "json", "rustls-tls"] }
+ai-foundation = { path = "crates/ai-foundation" }
+anyhow = "1.0"
+bytes = "1.11"
+cpal = "0.15"
+dotenvy = "0.15"
 serde_json = "1"
+tokio = { version = "1.48", features = ["macros", "rt-multi-thread", "signal", "sync", "time"] }
